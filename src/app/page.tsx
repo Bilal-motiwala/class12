@@ -1,8 +1,14 @@
 import Image from "next/image";
-import Navbar from "./Components/Navbar";
+import Header from "./Components/Header";
+import Herosection from "./Components/Herosection";
+import Footer from "./Components/Footer";
+
 
 export default function Home() {
   return (
-    <Navbar />
+    <><Header />
+    <Herosection />
+    <Footer />
+    </>
   );
 }
