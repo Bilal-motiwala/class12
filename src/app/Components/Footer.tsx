@@ -1,47 +1,57 @@
+/* eslint-disable react/jsx-no-undef */
 import React from 'react'
 import Image from 'next/image'
-import Vector from "@/app/assets/Vector.png"
-import Group from"@/app/assets/Group.png"
+import Pic from '@/app/assets/Pic.png'
 
 const Footer = () => {
   return (
     <main>
-    <div className='w-[1920px] h-[461px] top-[5195px] left-[1px] pt-[140px] pr-[220px] pb-[32px] gap-[200px] bg-[#043873]'>
-      
-      <div className='w-[1480px] h-[289px] gap-[100px]'>
+      {/* Footer Section */}
+      <footer className='bg-[#043873] text-white py-10 px-6 md:px-[220px]'>
+        <div className='flex flex-col md:flex-row justify-between gap-8'>
+          {/* Footer Left Section */}
+          <div className='w-full md:w-[30%]'>
+            <h2 className='text-2xl font-bold mb-4'>whitepace</h2>
+            <p className='text-[14px] leading-6 text-[#E5E5E5]'>
+              whitepace was created for the <em>new</em> ways we live and work. We make a better workspace around the world.
+            </p>
+          </div>
 
-        <div className='w-[295px] h-[169px] gap-[15px]'>
-
-            <div className='w-[191px] h-[34px]'>
-
-                <div className='w-[144px] h-[34px] left-[47px] font-bold size-[28px] leading-[33.89px] text-[#FFFF] p-20'>
-                    whitepace
-                </div>
-
-                <div className='w-[37px] h-[29px] top-[2.5px]'>
-                    <div className='w-[37px] h-[29px] text-[#FFFF]'>
-                    <div>
-                    <div className='w-[37px] h-[11.49px] text-[#FFFF] pt-1'>
-                            <Image src={Group} alt='Group' />
-                    </div>
-                        <div className='w-[37px] h-[26.46px] top-[2.55px] text-[#FFFF] pt-1 '>
-                            <Image src={Vector} alt='Vector' />
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='w-[240px] h-[120px] font-normal size-[18px] leading-[30px] tracking-tight text-[#F7F7EE]'>
-                    <p>whitepace was created for <br />the new ways we live and work. We make a better workspace around the world</p>
-                </div>
-
+          {/* Footer Links Section */}
+          <div className='flex flex-wrap w-full md:w-[65%] justify-between'>
+            <div>
+              <h3 className='text-lg font-semibold mb-4'>Product</h3>
+              <ul className='text-[#E5E5E5] text-[14px] leading-6'>
+                <li>Overview</li>
+                <li>Pricing</li>
+                <li>Customer stories</li>
+              </ul>
             </div>
-
+            <div>
+              <h3 className='text-lg font-semibold mb-4'>Resources</h3>
+              <ul className='text-[#E5E5E5] text-[14px] leading-6'>
+                <li>Blog</li>
+                <li>Guides & tutorials</li>
+                <li>Help center</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className='text-lg font-semibold mb-4'>Company</h3>
+              <ul className='text-[#E5E5E5] text-[14px] leading-6'>
+                <li>About us</li>
+                <li>Careers</li>
+                <li>Media kit</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-      </div>
-
-    </div>
+        {/* Footer Bottom Section */}
+        <div className='mt-8 text-center text-[#E5E5E5] text-sm'>
+          <hr className='border-[#E5E5E5] mb-4' />
+          <p>&copy;2021 Whitepace LLC.</p>
+        </div>
+      </footer>
     </main>
   )
 }

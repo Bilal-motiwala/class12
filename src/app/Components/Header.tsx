@@ -1,32 +1,44 @@
 import React from 'react'
 import Image from 'next/image'
-import logo from"@/app/assets/logo.png"
+import logo from '@/app/assets/logo.png'
+
 const Header = () => {
   return (
-    <main>
-      <div className='w-[1920px] h-[92px] justify-between left-1 py-[16px] px-[220px] bg-[#043873] flex'>
-
-        <div className='w-[191px] h-[34px] justify-between mt-3'>
+    <header>
+      <div className='w-full h-[92px] flex justify-between items-center py-4 px-6 md:px-12 lg:px-[220px] bg-[#043873]'>
+        {/* Logo Section */}
+        <div className='w-[191px] h-[34px]'>
           <Image src={logo} alt='logo' />
         </div>
 
-        <div className='w-[737.5px] h-[60px] gap-[60px]'>
-          <div className='w-[549px] h-[23px] gap-[32px]'>
-            <ul className='w-[78px] h-[23px] text-[18px] leading-[23px] text-white font-sans gap-10 flex justify-between  mt-4 ml-96'>
-              <li>Products</li>
-              <li>Solutions</li>
-              <li>Resources</li>
-              <li>Pricing</li>
-            </ul>
-          </div>
-        </div>
+        {/* Navigation Section */}
+        <nav className='hidden md:flex w-auto gap-10'>
+          <ul className='flex gap-8 text-[18px] leading-[23px] text-white font-sans'>
+            <li>Products</li>
+            <li>Solutions</li>
+            <li>Resources</li>
+            <li>Pricing</li>
+          </ul>
+        </nav>
 
-        <div className='w-[126px] h-[60px] gap-[24px] mr-16'>
-          <button className='w-[126px] h-[60px] gap-[10px] rounded-lg bg-[#FFE492] py-4 px-10 '>Login</button>
+        {/* Login Button Section */}
+        <div className='w-[126px]'>
+          <button className='w-full h-[60px] rounded-lg bg-[#FFE492] text-center py-2'>
+            Login
+          </button>
         </div>
-
       </div>
-    </main>
+
+      {/* Mobile Navigation Menu */}
+      <nav className='md:hidden'>
+        <ul className='flex flex-col items-center gap-4 py-4 bg-[#043873] text-white text-[16px]'>
+          <li>Products</li>
+          <li>Solutions</li>
+          <li>Resources</li>
+          <li>Pricing</li>
+        </ul>
+      </nav>
+    </header>
   )
 }
 
